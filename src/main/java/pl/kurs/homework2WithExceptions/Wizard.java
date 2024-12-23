@@ -1,4 +1,7 @@
-package pl.kurs.homework2;
+package pl.kurs.homework2WithExceptions;
+
+import pl.kurs.homework2WithExceptions.exceptions.NotEnoughHealthException;
+import pl.kurs.homework2WithExceptions.exceptions.WizardIsNullException;
 
 public class Wizard {
     private String name;
@@ -29,15 +32,13 @@ public class Wizard {
     }
 
 
-    public void throwSpell(String spellName, Wizard target) {
-        //wyjątek
+    public void throwSpell(String spellName, Wizard target) throws NotEnoughHealthException, WizardIsNullException {
         if (this.health <= 0) {
-            System.out.println(this.name + " jest martwy i nie może rzucać zaklęć");
+            throw new NotEnoughHealthException(this.name + " jest martwy i nie może rzucać zaklęć");
         }
-        //wyjątek
         SpellType spell = type.getSpellByName(spellName);
         if (spell == null) {
-            System.out.println(this.name + " nie zna takiego zaklęcia!");
+            throw new WizardIsNullException(this.name + " nie zna takiego zaklęcia!");
         } else {
             executeSpell(spell, target);
         }

@@ -1,4 +1,4 @@
-package pl.kurs.homework2;
+package pl.kurs.homework2WithExceptions;
 
 public enum WizardType {
     WIZARD_OF_FIRE("Mag ognia", new SpellType[]{SpellType.HEAL, SpellType.FIREBALL}),

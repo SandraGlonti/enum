@@ -105,6 +105,7 @@ WIZARD_OF_WIND zna zaklęcie leczące (HEAL, dodaje 30 punktów życia) oraz ra�
 W klasie Wizard napisz publiczną metodę throwSpell(), która przyjmuje dwa argumenty: Stringa z nazwą zaklęcia
  oraz Czarodzieja, który jest celem zaklęcia. Trzymaj się zasad hermetyzacji, enkapsulacji,
   podziel sobie metodę publiczną na mniejsze metody prywatne itp.
+
 Pamiętaj, że czarodzieje nie mogą za pomocą zaklęcia HEAL zwiększyć poziomu życia w nieskończoność
 (zdrowie czarodzieja to max 200.0 pkt). Czarodziej może leczyć siebie oraz swojego przeciwnika jeżeli się zlituje nad nim.
 Życie czarodziejów nie może spaść poniżej 0.0 pkt, bez względu na to ile zostanie rzuconych na nich zaklęć.
